@@ -4,12 +4,22 @@
 
 def main() :
     
-    inputFile = open("input.txt") 
+    inputFile = open("input.txt")
 
-    for i in inputFile:           
-        if i[0] != '#':
-            print (i)
+    first_line = inputFile.readline()   
+    if(first_line[0] == 'D'):           
+        print ("Directed\n")            
+    if(first_line[0] == 'U'):           
+        print ("Undirected\n")          
 
+    graph = {}
+    node = {}
+    
+    for line in inputFile:           
+        if line[0] != '#':
+            node = line
+            graph[node[0]] = node[2], node[4]
+            print (graph)
 
 if __name__ == '__main__':
 
