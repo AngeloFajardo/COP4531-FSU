@@ -6,7 +6,7 @@ import itertools
 from heapq import heapify, heappush, heappop
 
 inf = float('inf')
-readFile = open("input.txt")
+readFile = open(input("Please input filename: "))
 
 class PriorityQueue():
     def __init__(self):
