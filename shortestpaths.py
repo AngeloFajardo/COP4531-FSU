@@ -54,7 +54,16 @@ def main():
         vertices.add(i[0])
         vertices.add(i[1])
 
-    source = 'A'
+    loop = True
+    source = ''
+    
+    while loop:
+        if source not in vertices:
+            source = input('Enter Start Node: ')[0]
+        else:
+            loop = False
+
+    #source = 'A'
     edges = {vertex: set() for vertex in vertices} 
 
     for start, end, cost in G:
