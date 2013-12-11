@@ -63,7 +63,6 @@ def main():
         else:
             loop = False
 
-    #source = 'A'
     edges = {vertex: set() for vertex in vertices} 
 
     for start, end, cost in G:
