@@ -1,0 +1,7 @@
+Dijkstra
+NODE A : 0
+NODE B : 3
+NODE C : 2
+NODE D : 5
+NODE E : 6
+End Dijkstra
