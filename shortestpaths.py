@@ -68,13 +68,13 @@ def main():
         else:
             Q.addNode(i, inf)
 
-    uq = Q.popNode() # Pop min Starting node
+    uq = Q.popNode() 
         
     while(True):
         if uq[1] == inf: break
-        uVal, uPrio = uq # uVal => Value    uPrio => Priority
+        uVal, uPrio = uq 
 
-        for adjV in edges[uVal]: # for each adj vertex in edges in set index uVal
+        for adjV in edges[uVal]: 
             if uPrio + adjV[1] < Q.getPriority(adjV[0]):
                 newPrio = uPrio + adjV[1]
                 Q.addNode(adjV[0], newPrio)
