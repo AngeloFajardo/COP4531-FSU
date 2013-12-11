@@ -33,6 +33,7 @@ class PriorityQueue():
 def main():
 
     setMode = True
+    directed = ''
 
     G = []
         
@@ -41,13 +42,21 @@ def main():
             if setMode:
                 if line[0] == "D":
                     print ('Directed')
+                    directed = True
                 elif line[0] == "UD":
                     print ('Undirected')
+                    directed = False
                 setMode = False
             else:
-                temp = line.split()
-                G.append((temp[0], temp[1], int(temp[2])))
+                if directed == True:
+                    temp = line.split()
+                    G.append((temp[0], temp[1], int(temp[2])))
+                else:
+                    temp = line.split()
+                    G.append((temp[0], temp[1], int(temp[2])))
+                    G.append((temp[1], temp[0], int(temp[2])))
 
+                    
     vertices = set()
 
     for i in G:
